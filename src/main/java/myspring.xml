@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+            <bean id="dog" class="com.springpractice.ioc.Dog">
+            
+            <constructor-arg name="id" value="1"></constructor-arg>
+            <constructor-arg name="name" value="Kruthik"></constructor-arg>
+            <constructor-arg name="email" value="kruthik22bs@gmail.com"></constructor-arg>
+            
+            </bean>
+            <bean id="student" class="com.springpractice.ioc.Student"></bean>
+            
+            <bean id="teacher" class="com.springpractice.ioc.Teacher">
+            
+            <property name="id" value="50"></property>
+            <property name="name" value="Nikhil"></property>
+            <property name="email" value="nikhilsnayak@gmail.com"></property>
+            
+            </bean>
+            
+            <bean id="car" class="com.springpractice.ioc.Car">
+            
+            <property name="engine" ref="engine"></property>
+            
+            </bean>
+            
+            <bean id="engine" class="com.springpractice.ioc.Engine">
+            
+            </bean>
+            
+            
+</beans>
